@@ -10,7 +10,7 @@ function Footer() {
   const navigate = useNavigate();
 
   return (
-    <footer style={{ position: 'fixed', bottom: 0, width: '100%', backgroundColor: '#f8f9fa', padding: '10px 0', display: 'flex', justifyContent: 'space-around', borderTop: '1px solid #ccc' }}>
+    <footer style={{ position: 'fixed', bottom: 0, width: '100%', backgroundColor: 'white' , padding: '10px 0', display: 'flex', justifyContent: 'space-around', borderTop: '1px solid #ccc' }}>
       <Button onClick={() => navigate('/home')} color="orange">
         <HomeIcon />
       </Button>

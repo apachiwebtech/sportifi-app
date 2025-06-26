@@ -1,7 +1,8 @@
 import React from 'react';
 import { TextField, Button, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import logo from './img/image.png';
+// import logo from './img/image.png';
+import logo from './img/logo.png'
 import axios from 'axios';
 import { Main_URL } from './Base_url';
 
@@ -66,14 +67,18 @@ function Login() {
 
     return (
         <Box sx={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-            <Box sx={{ height: '30%', backgroundColor: 'orange', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img src={logo} width={300} alt="Logo" />
+            <Box sx={{ height: '25%', backgroundColor: '#5f6ffa', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <img 
+                src={logo} 
+                width={250} alt="Logo" />
             </Box>
-            <Box sx={{ height: '70%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '20px' }}>
+            <Box sx={{ height: '75%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '40px',backgroundColor: '#f5f6ff'}}>
                 <Box sx={{ width: '300px', display: 'flex', flexDirection: 'column', gap: 2 }}>
                     <TextField label="Username" name="Username" value={formdata.Username} onChange={handleChange} variant="outlined" fullWidth />
                     <TextField label="Password" name="Password" value={formdata.Password} type="password" onChange={handleChange} variant="outlined" fullWidth />
-                    <Button variant="contained" onClick={handleSubmit} color="primary" fullWidth>Login</Button>
+                    <Box sx={{ width: '300px', display: 'flex', flexDirection: 'column', alignItems:"center"}}>
+                    <Button variant="contained" onClick={handleSubmit} color="primary" fullWidth style={{width:"250px"}}>Login</Button>
+                    </Box>
                 </Box>
             </Box>
         </Box>

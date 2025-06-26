@@ -1,17 +1,11 @@
-import  {React, useEffect } from 'react';
-import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
+import React, { useEffect } from 'react';
+import { AppBar, Toolbar, IconButton } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import logo from '../img/image.png';
+import logo from '../img/logo.png';
 import { useNavigate } from 'react-router-dom';
 
 function Header() {
   const navigate = useNavigate();
-  // Function to handle navigation on click
-  const handleNavigation = () => {
-    navigate('/home');
-    console.log('Logo clicked, navigating to home');
-
-  };
 
   useEffect(() => {
     const userId = localStorage.getItem('id');
@@ -22,14 +16,29 @@ function Header() {
 
   const location = window.location.pathname;
 
+  // Separate handler for logo
+  const handleLogoClick = () => {
+    navigate('/home');
+  };
+
+  // Back button goes to previous page
+  const handleBack = () => {
+    navigate(-1);
+  };
+
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'orange' }}>
+    <AppBar position="sticky" sx={{ backgroundColor: '#5f6ffa', top: 0, zIndex: 1100 }}>
       <Toolbar>
-        <img src={logo} onClick={handleNavigation} alt="Logo" style={{ height: '45px', marginRight: '10px' }} />
+        <img
+          src={logo}
+          onClick={handleLogoClick}
+          alt="Logo"
+          style={{ height: '45px', marginRight: '10px', cursor: 'pointer' }}
+        />
         <span style={{ flexGrow: 1 }} />
         {location !== '/home' && (
           <IconButton
-            onClick={handleNavigation}
+            onClick={handleBack}
             sx={{ marginRight: '16px' }}
             aria-label="Back"
             color="inherit"
@@ -41,5 +50,6 @@ function Header() {
     </AppBar>
   );
 }
+
 
 export default Header;
