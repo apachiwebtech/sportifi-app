@@ -40,9 +40,9 @@ function Login() {
             .then((response) => {
                 // Handle successful login
                 const data  = response.data.data;
-                if(data.status == '0'){
-                    alert('Invalid credentials!');
-                }
+                // if(data.status == '0'){
+                //     alert('Invalid credentials!');
+                // }
                 const userid = data.user_id;
                 const name  = data.name;
                 const email  = data.email;

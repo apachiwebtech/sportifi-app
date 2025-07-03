@@ -1,4 +1,4 @@
-export const Main_URL = "https://mayekarinnovations.com/stock_app/php_api_to_app/app.php";
+export const Main_URL = "http://techprojects.co.in/sportifipromotion/weblogin/api_to_app/app.php";
 
 
 
