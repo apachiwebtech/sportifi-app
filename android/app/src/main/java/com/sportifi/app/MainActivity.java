@@ -1,4 +1,4 @@
-package com.stock.app;
+package com.sportifi.app;
 
 import com.getcapacitor.BridgeActivity;
 

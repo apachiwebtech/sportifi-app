@@ -15,9 +15,9 @@ function App() {
         <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/event" element={<Events/>} />
-            <Route path="/eventresult" element={<EventResult/>} />
-            <Route path="/result" element={<Result/>} />
+            <Route path="/event/:id" element={<Events />} />
+            <Route path="/eventresult" element={<EventResult />} />
+            <Route path="/result" element={<Result />} />
             <Route path="/stock-report" element={<StockReport />} />
         </Routes>
     );

@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.stock.app",
+  "applicationId": "com.sportifi.app",
   "variantName": "release",
   "elements": [
     {
